@@ -4,8 +4,7 @@ LaTeX is a very powerful tool for documentation preparation, and is often used b
 However, some new graduate students might not have experience in using LaTeX and thus have a difficult time in prepare their first paper. 
 
 In this [article](./paper_writing_tips.pdf), we will first provide some tips for paper writing.
-using LaTeX. 
-Then, we will showcase several working examples for the table and figure, which have been used in my previous publications. The readers are encouraged to adapt those tables and figures to their purposes to save time. 
+Then, we will showcase several working examples for the tables and figures, which have been used in our previous publications. The readers are encouraged to adapt those tables and figures to their purposes to save time when preparing their first papers.
 
 ## Examples for the Tables
 <p align="center">
