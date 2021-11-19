@@ -109,14 +109,9 @@
     \item use newcommand in equation
     \item Principal: be compact and clear.
     \item Contributions
+    \item Use Figure x at the beginning of the sentence, and Fig.~x else where.
+    \item Also use Table~x when referring table.
 \end{itemize}
-
-\clearpage
-\section{Sample layout for figures}
-\begin{itemize}
-    \item The caption should be at the bottom of the figure. 
-\end{itemize}
-
 
 \clearpage
 \section{Sample layout for tables}
@@ -124,29 +119,51 @@ Suggestions.
 \begin{itemize}
     \item The caption should be at the top of the table.
     \item The text should not be too small.
-    \item 
+    \item It is better to put the table at top of the paper.
 \end{itemize}
 
 % single column
-\input{tables/table1}
-\input{tables/table2}
-\input{tables/table3}
-\input{tables/table4}
-\input{tables/table5}
-\input{tables/table6}
-\input{tables/table_network2}
+\input{tables/table1} % simple table
+\input{tables/table2} % multi-column table
+\input{tables/table3} % multi-column with makecell
+\input{tables/table4} % multi-column with vertical lines
+\input{tables/table5} % multi-column with bold font
+\input{tables/table6} % multi-column with parallel lines
+\input{tables/table_network2} % single-column network arch
 
-\input{tables/table_figure1}
+\input{tables/table_figure1} % table with images
 
 % two column
-\input{tables/table8}
-\input{tables/table9}
-\input{tables/table7}
-\input{tables/table_figure2}
+\input{tables/table8} % two-column table
+\input{tables/table9} % two-column table with color header
+\input{tables/table7} % two-column table with two sub-tables
+\input{tables/table_figure2} % two-column tables with images in the header
 
-\input{tables/table_network1}
+\input{tables/table_network1} % two column network arch table
 
  
+\clearpage
+\section{Sample layout for figures}
+\begin{itemize}
+    \item The caption should be at the bottom of the figure. 
+\end{itemize}
+
+% Single-column
+\input{figures/figure1} % single image
+\input{figures/figure2} % two images
+\input{figures/figure3} % four images
+\input{figures/figure4} % four images with text header
+\input{figures/figure5} % four images with vertical text
+\input{figures/figure6} % two sub figures
+
+% Two column
+\input{figures/figure7} % single image
+\input{figures/figure8} % multiple images
+\input{figures/figure9} % 
+\input{figures/figure10} % 
+\input{figures/figure11} % 
+
+
 \clearpage
 %%%%%%%%% REFERENCES
 {\small
