@@ -1,0 +1,101 @@
+\begin{figure}[t] \centering
+\tdplotsetmaincoords{70}{105}
+%
+\pgfmathsetmacro{\rvec}{1}
+\pgfmathsetmacro{\thetavec}{40}
+\pgfmathsetmacro{\phivec}{45}
+%
+\begin{tikzpicture}[scale=1.7,tdplot_main_coords]
+    \coordinate (O) at (0,0,0); % Coordinate
+    \draw[->] (0,0,0) -- (1,0,0) node[below=0.5ex,left=-0.4ex]{$z$};
+    \draw[->] (0,0,0) -- (0,1,0) node[right=-0.4ex]{$x$};
+    \draw[->] (0,0,0) -- (0,0,1) node[above=-0.4ex]{$y$};
+    \draw[dashed,color=gray] (0,0,0) -- (0,0,-1);
+    \draw[dashed,color=gray] (0,0,0) -- (0,-1,0);
+    \tdplotdrawarc[dashed,color=gray]{(O)}{1}{-90}{90}{}{}
+    \tdplotsetthetaplanecoords{0}
+    \tdplotdrawarc[semithick,dashed,color=gray,tdplot_rotated_coords]{(0,0,0)}{1}{0}{180}{}{}
+    \tdplotsetthetaplanecoords{90}
+    \tdplotdrawarc[semithick,dashed,color=gray,tdplot_rotated_coords]{(0,0,0)}{1}{0}{360}{}{}
+
+    \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec} % Draw vector P
+    \draw[line width=1pt,-stealth,color=black] (O) -- (P) node[above right] {$P$};
+
+    % Draw arc for angle
+    \tdplotsetcoord{Px}{\rvec}{90}{\phivec} % Azimuth
+    \draw[dashed, color=black] (O) -- (Px);
+    \tdplotdrawarc[thick,color=red]{(O)}{0.4}{\phivec}{90}{color=red,below=0.4ex,right=-0.4ex}{$\phi$} 
+
+    \tdplotsetthetaplanecoords{\phivec} % Elevation
+    \tdplotdrawarc[tdplot_rotated_coords,thick,color=blue,opacity=0.8]{(0,0,0)}{0.4}{\thetavec}{90}{above=0.4ex,right=-0.5ex}{$\theta$}
+    \tdplotdrawarc[semithick,dashed,color=gray,tdplot_rotated_coords]{(0,0,0)}{1}{0}{180}{}{}
+\end{tikzpicture}
+
+
+\tdplotsetmaincoords{70}{100}
+%
+\pgfmathsetmacro{\rvec}{1}
+\pgfmathsetmacro{\thetavec}{52}
+\pgfmathsetmacro{\phivec}{45}
+%
+\pgfmathsetmacro{\dev}{18}
+\pgfmathsetmacro{\tha}{\thetavec-\dev}
+\pgfmathsetmacro{\thb}{\thetavec+\dev}
+\pgfmathsetmacro{\phia}{\phivec-\dev}
+\pgfmathsetmacro{\phib}{\phivec+\dev}
+
+\begin{tikzpicture}[scale=1.7,tdplot_main_coords]
+    \coordinate (O) at (0,0,0); % Coordinate
+    %\draw[semithick,->] (0,0,0) -- (1,0,0) node[left]{$y$};
+    %\draw[semithick,->] (0,0,0) -- (0,1,0) node[anchor=north]{$x$};
+    %\draw[semithick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+    \draw[->] (0,0,0) -- (1,0,0) node[below=0.5ex,left=-0.4ex]{$z$};
+    \draw[->] (0,0,0) -- (0,1,0) node[right=-0.4ex]{$x$};
+    \draw[->] (0,0,0) -- (0,0,1) node[above=-0.4ex]{$y$};
+    \draw[dashed,color=gray] (0,0,0) -- (0,0,-1);
+    \draw[dashed,color=gray] (0,0,0) -- (0,-1,0);
+    \tdplotdrawarc[semithick,dashed,color=gray]{(O)}{1}{-90}{90}{}{}
+    \tdplotsetthetaplanecoords{90}
+    \tdplotdrawarc[semithick,dashed,color=gray,tdplot_rotated_coords]{(0,0,0)}{1}{0}{360}{}{}
+
+    \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec} % Draw vector P
+    \draw[thick,-stealth,color=black] (O) -- (P) node[below=0.2ex,right=-1.0ex] {$P$};
+
+    \tdplotsetcoord{Pa}{\rvec}{\tha}{\phia}
+    \tdplotsetcoord{Pb}{\rvec}{\tha}{\phib}
+    \tdplotsetcoord{Pc}{\rvec}{\thb}{\phia}
+    \tdplotsetcoord{Pd}{\rvec}{\thb}{\phib}
+    \tdplotsetcoord{Pf}{\rvec}{\tha}{\phivec}
+
+    \draw[color=black] (O) -- (Pa) node[above=0.2ex,left=-0.7ex] {\color{black!90}\scriptsize $A$};
+    \draw[color=black] (O) -- (Pb) node[above,right=-0.3ex] {\color{black!90}\scriptsize $B$};
+    \draw[color=black] (O) -- (Pc) node[below=1.2ex,left=-0.9ex] {\color{black!90}\scriptsize $C$};
+    \draw[color=black] (O) -- (Pd) node[below=0.2ex,right=-0.3ex] {\color{black!90}\scriptsize $D$};
+    \draw[color=blue,dashed] (O) -- (Pf) node[above left] {};
+
+    \draw[semithick,color=red] (Pa) to  (Pb) node[below left] {};
+    \draw[semithick,color=red] (Pd) to  (Pc) node[below left] {};
+
+    \tdplotsetthetaplanecoords{\phivec}
+    \tdplotdrawarc[thick,color=blue,opacity=0.8,tdplot_rotated_coords]{(0,0,0)}{0.7}{\tha}{\thetavec}{above=0.7ex,right=-0.7ex}{\small $\delta$}
+    \tdplotsetthetaplanecoords{\phia}
+    \tdplotdrawarc[semithick,color=red,tdplot_rotated_coords]{(0,0,0)}{\rvec}{\tha}{\thb}{anchor=south west}{}
+    \tdplotdrawarc[dashed,tdplot_rotated_coords]{(0,0,0)}{\rvec}{0}{\tha}{anchor=south west}{}
+    \tdplotdrawarc[dashed,tdplot_rotated_coords]{(0,0,0)}{\rvec}{\thb}{180}{anchor=south west}{}
+    \tdplotsetthetaplanecoords{\phib}
+    \tdplotdrawarc[semithick,color=red,tdplot_rotated_coords]{(0,0,0)}{\rvec}{\tha}{\thb}{anchor=south west}{}
+    \tdplotdrawarc[dashed,tdplot_rotated_coords]{(0,0,0)}{\rvec}{0}{\tha}{anchor=south west}{}
+    \tdplotdrawarc[dashed,tdplot_rotated_coords]{(0,0,0)}{\rvec}{\thb}{180}{anchor=south west}{}
+    % Draw arc for angle
+    %\tdplotsetcoord{Px}{\rvec}{90}{\phivec} % Azimuth
+    %\draw[dashed, color=black] (O) -- (Px);
+    %\tdplotdrawarc[thick,color=red]{(O)}{0.4}{\phivec}{90}{color=red,below=0.3ex,right}{$\phi$} 
+
+    %\tdplotsetthetaplanecoords{\phivec} % Elevation
+    %\tdplotdrawarc[tdplot_rotated_coords,thick,color=blue,opacity=0.8]{(0,0,0)}{0.4}{\thetavec}{90}{above=0.1ex,right=-0.5ex}{$\theta$}
+    %\tdplotdrawarc[semithick,dashed,color=gray,tdplot_rotated_coords]{(0,0,0)}{1}{0}{90}{}{}
+\end{tikzpicture}
+
+    \vspace{-0.6em} \makebox[0.22\textwidth]{\small (a)} \hfill \makebox[0.23\textwidth]{\small (b)}
+    \caption{(a) Light directions $A, B, C$, and $D$ have the maximum deviation angles with the light direction $P$ after discretization. (b) Upper-bound of normal estimation error for PS-FCN~\cite{chen2018ps} under different light direction space discretization levels ($\infty$ indicates no discretization).} \label{fig:discretization}
+\end{figure}

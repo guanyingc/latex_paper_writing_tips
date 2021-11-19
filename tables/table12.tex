@@ -1,0 +1,30 @@
+\begin{table*} \centering
+    \caption{A two-column table with remark.}
+    \label{tab:table8}
+    \resizebox{\textwidth}{!}{
+    \Huge
+        \begin{tabular}{c|*{4}{c}|*{4}{c}|*{4}{c}|*{4}{c}|*{4}{c}}
+        \toprule
+        & \multicolumn{4}{c}{Glass} 
+                               & \multicolumn{4}{c}{Object A} 
+                               & \multicolumn{4}{c}{Object B} 
+                               & \multicolumn{4}{c}{Object C}  
+                               & \multicolumn{4}{c}{Average}  \\
+                               & F-EPE & A-MSE & I-MSE &  M-IoU 
+                               & F-EPE & A-MSE & I-MSE &  M-IoU 
+                               & F-EPE & A-MSE & I-MSE &  M-IoU 
+                               & F-EPE & A-MSE & I-MSE &  M-IoU 
+                               & F-EPE & A-MSE & I-MSE &  M-IoU \\
+        \midrule
+        Method A    & 3.6 / 30.3 & 1.33 & 0.48 & 0.12 & 6.4 / 53.2 & 1.54 & 0.68 & 0.12 & 10.3 / 39.2 & 1.94 & 1.57 & 0.24 & 6.8 / 56.8 & 2.50 & 0.85 & 0.11 & 6.8 / 44.9 & 1.83 & 0.90 & 0.15 \\
+        Method B$^*$     & 2.1 / 15.8 & 0.22 & 0.14 & 0.97 & 3.1 / 23.5 & 0.31 & 0.23 & 0.97 & 2.0 / 6.7   & 0.17 & 0.28 & 0.99 & 4.5 / 34.4 & 0.38 & 0.33 & 0.92 & 2.9 / 20.1 & 0.27 & 0.24 & 0.96 \\
+        \midrule
+        Method C       & 1.9 / 14.7 & 0.21 & 0.14 & 0.97 & 2.9 / 21.8 & 0.30 & 0.22 & 0.97 & 1.9 / 6.6   & 0.15 & 0.29 & 0.99 & 4.1 / 31.5 & 0.37 & 0.32 & 0.92 & 2.7 / 18.6 & 0.26 & 0.24 & 0.96 \\
+        \bottomrule
+    \end{tabular}
+    }
+    \vspace{-1em}
+    \begin{flushleft}
+        \footnotesize ${^*}$ indicates that method B is trained from scratch.
+    \end{flushleft}
+\end{table*}
