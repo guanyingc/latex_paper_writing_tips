@@ -1,0 +1,33 @@
+\begin{table*}[t] \centering
+\begin{minipage}[t]{0.48\linewidth}
+    \caption{Two tables placed side by side. Table A (left).} \label{tab:table10A}
+    \resizebox{\textwidth}{!}{
+    \large
+    \begin{tabular}{*{10}{c}}
+        \toprule
+        &  &  \multicolumn{2}{c}{$6-9$ frames} & \multicolumn{2}{c}{$5-7$ frames} & \multicolumn{2}{c}{$50-200$ frames} \\
+       Data & Size &  2-Exp & 3-Exp &  2-Exp & 3-Exp &  2-Exp & 3-Exp \\
+        \midrule
+        A & $1280\times 720$ & 1 & 2 & 3 & 4 & 5 & 4 \\
+        Ours & $4096\times 2168$ & 2 & 3 & 4 & 6 & 5 & 4 \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{minipage}\hfill
+    \begin{minipage}[t]{0.48\linewidth}
+    \caption{Two tables placed side by side. Table B (right).} \label{tab:table10B}
+    \resizebox{\textwidth}{!}{
+    \large
+    \begin{tabular}{*{10}{c}}
+        \toprule
+         %&  &  \multicolumn{3}{c}{\makecell{Static Scenes \\ w/ Ground Truth}} & \multicolumn{3}{c}{\makecell{Dynamic Scenes \\ w/o Ground Truth}} \\
+        &  &  \multicolumn{3}{c}{$6-9$ frames} & \multicolumn{3}{c}{$5-7$ frames} \\
+        Data & Size &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} \\
+        \midrule
+        A & $1280\times 720$ & 1 & 2 & 3 & 4 & 5 & 4 \\
+        Ours & $4096\times 2168$ & 2 & 3 & 4 & 6 & 5 & 4 \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{minipage}
+\end{table*}
