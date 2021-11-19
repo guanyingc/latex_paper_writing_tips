@@ -6,8 +6,8 @@
 
 %%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
 %\usepackage[review]{cvpr}      % To produce the REVIEW version
-\usepackage{cvpr}              % To produce the CAMERA-READY version
-%\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+%\usepackage{cvpr}              % To produce the CAMERA-READY version
+\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
 
 % Include other packages here, before hyperref.
 \usepackage{graphicx}
@@ -59,10 +59,10 @@
 \begin{document}
 
 %%%%%%%%% TITLE - PLEASE UPDATE
-\title{LaTex Paper Writing Tips for Beginners}
+\title{Tips for Writing a Research Paper using \LaTeX}
 
 \author{Guanying Chen \\
-{\tt\small guanying2018@gmail.com}
+{\tt\small \url{https://guanyingc.github.io}}
 % For a paper whose authors are all at the same institution,
 % omit the following lines up until the closing ``}''.
 % Additional authors and addresses can be added with ``\and'',
@@ -82,45 +82,56 @@
 \vspace{6em}
 \section{Introduction}
 \label{sec:intro}
+\LaTeX\ is a very powerful tool for documentation preparation, and is often used by researchers to prepare a manuscript for reviewing and publication. 
+However, some new graduate students might not have experience in using \LaTeX and thus have a difficult time in prepare their first paper. 
 
-\section{Common Mistakes}
+In this article, we will first provide some tips for paper writing.  
+using \LaTeX. 
+Then, we will showcase several working examples for the table and figure, which have been used in my previous publications. The readers are encouraged to adapt those tables and figures to their purposes to save time. 
+
+\section{Tips for the Writing}
+In this section, we provide some tips for paper writing. 
 \begin{itemize}
-    \item There should be a space before the open parentheses: [\wrong{hello(word)}, \correct{hello (word)}].
-    \item citation
-    \item There should be no space before the punctuation (\eg, ,. ').
-    \item \ie, \eg
-    \item Do not add citations in the abstract
-    \item Every equation should end with a punctuation.
-    \item The first character should be capitalized
-    \item keep the same tense
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
+    \item There should be a space before the open parentheses:\\
+        \wrong{Convolutional neural network(CNN) has been successfully applied on various vision problems.}\\
+        \correct{Convolutional neural network (CNN) has been successfully applied on various vision problems.}
+    \item There should be no space before the period and comma punctuation marks:\\
+        \wrong{Convolutional neural network (CNN) has been successfully applied on various vision problems .}\\
+        \correct{Convolutional neural network (CNN) has been successfully applied on various vision problems.}
+    \item There should be a punctuation at the end of the equation:
+        \begin{align}
+            \label{eq:eq1}
+            & \textcolor{red}{E = mc^2 \quad \times} \\
+            & \textcolor{blue}{E = mc^2. \quad \checkmark}
+        \end{align}
+    \item All equations should be numbered:
+        \begin{align}
+            \label{eq:eq2} \nonumber
+            & \textcolor{red}{E = mc^2. \quad \times}\\ 
+            & \textcolor{blue}{E = mc^2. \quad \checkmark}
+        \end{align}
+    \item The first character in a sentence should be capitalized:\\
+        \wrong{how are you?}\\
+        \correct{How are you?}
+    \item Double quotation marks should be correctly typed:\\
+        \wrong{Are you "okay"?}\\
+        \correct{Are you ``okay''?}
+    \item There should be a space before the citation:\\
+        \wrong{A proposes a method B for this problem[1].}\\
+        \correct{A proposes a method B for this problem~[1].}
+    \item Do not include citations in the abstract.
+    \item Use \textbackslash ie command for \ie and use \textbackslash eg for \eg.
+    \item Define a macro for a word or phrase if it appears frequently (\eg, the method name and the dataset name). The command can be\\``\textbackslash newcommand\{\textbackslash NetName\}\{A Great Deep Net\}''.
+    \item When referring to a table, also use ``Table~\ref{tab:table1}'' in a sentence.
+    \item The table caption should be at the top of the table.
+    \item When referring to a figure, use ``Figure~\ref{fig:figure1}'' at the beginning, and ``Fig.~\ref{fig:figure1}'' at the middle or the end of a sentence.
+    \item The figure caption should be at the bottom of the table.
+    \item It is better to put the tables and figures at the top of a page.
 \end{itemize}
 
-\section{Suggestions}
-\begin{itemize}
-    \item use newcommand for abbr
-    \item Fig/Tab.
-    \item use newcommand in equation
-    \item Principal: be compact and clear.
-    \item Contributions
-    \item Use Figure x at the beginning of the sentence, and Fig.~x else where.
-    \item Also use Table~x when referring table.
-\end{itemize}
 
 \clearpage
-\section{Sample layout for tables}
-Suggestions.
-\begin{itemize}
-    \item The caption should be at the top of the table.
-    \item The text should not be too small.
-    \item It is better to put the table at top of the paper.
-\end{itemize}
+\section{Examples for the Tables}
 
 % single column
 \input{tables/table1} % simple table
@@ -128,6 +139,7 @@ Suggestions.
 \input{tables/table3} % multi-column with makecell
 \input{tables/table4} % multi-column with vertical lines
 \input{tables/table5} % multi-column with bold font
+\newpage
 \input{tables/table6} % multi-column with parallel lines
 \input{tables/table_network2} % single-column network arch
 
@@ -135,6 +147,7 @@ Suggestions.
 
 % two column
 \input{tables/table8} % two-column table
+\input{tables/table12} % two-column table with remarks
 \input{tables/table9} % two-column table with color header
 \input{tables/table7} % two-column table with two sub-tables
 \input{tables/table_figure2} % two-column tables with images in the header
@@ -145,10 +158,9 @@ Suggestions.
 
  
 \clearpage
-\section{Sample layout for figures}
-\begin{itemize}
-    \item The caption should be at the bottom of the figure. 
-\end{itemize}
+\clearpage
+
+\section{Examples for Figures}
 
 % Single-column
 \input{figures/figure1} % single image
@@ -157,6 +169,8 @@ Suggestions.
 \input{figures/figure4} % four images with text header
 \input{figures/figure5} % four images with vertical text
 \input{figures/figure6} % two sub figures
+\input{figures/figure15} % figure numeric results and color bar
+
 
 % Two column
 \input{figures/figure7} % single image
@@ -165,15 +179,16 @@ Suggestions.
 \input{figures/figure11} % multiple images with two zoom in patches (vertical) 
 \input{figures/figure13} % two figure placed side-by-side
 \input{figures/figure12} % figure with caption at the left
+\input{figures/figure14} % figure numeric results and color bar
 
 \input{figures/figure10} % multiple images organized with multi-level
 
 
-\clearpage
+%\clearpage
 %%%%%%%%% REFERENCES
-{\small
-\bibliographystyle{ieee_fullname}
-\bibliography{egbib}
-}
+%{\small
+%\bibliographystyle{ieee_fullname}
+%\bibliography{egbib}
+%}
 
 \end{document}

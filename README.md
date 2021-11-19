@@ -1,32 +1,19 @@
-# CVPR 2022 Template
+## Tips for Writing a Research Paper using LaTeX
 
-This is the LaTeX template for IEEE/CVF CVPR 2022 submissions, rebuttals, and final versions.
+LaTeX is a very powerful tool for documentation preparation, and is often used by researchers to prepare a manuscript for reviewing and publication. 
+However, some new graduate students might not have experience in using LaTeX and thus have a difficult time in prepare their first paper. 
 
-The last version of the CVPR/ICCV LaTeX template had been developed by Paolo.Ienne@di.epfl.ch and awf@acm.org about 15 years ago. That version suffered from several issues:
+In this article, we will first provide some tips for paper writing.
+using LaTeX. 
+Then, we will showcase several working examples for the table and figure, which have been used in my previous publications. The readers are encouraged to adapt those tables and figures to their purposes to save time. 
 
-* Authors needed several individual files: cvpr.sty, cvpr_eso.sty, eso-pic.sty.
-* For CVPR/ICCV rebuttals, another version of cvpr.sty was required.
-* Several warnings arose due to deprecated options.
+The article can be found in [./paper_writing_tips.pdf](./paper_writing_tips.pdf)
+### Examples for the Tables
+<p align="center">
+    <img src='samples/table.jpg' width="800">
+</p>
 
-To address this, a new package was subsequently developed by Ming-Ming Cheng (cmm_spam@nankai.edu.cn), which is intended to be used as a single style file that allows to build review, rebuttal, and final versions with just one package.
-
-It is has been further modified by Stefan Roth (stefan.roth@NOSPAMtu-darmstadt.de) for CVPR 2022.
-
-To apply it, simply use one of the following commands:
-
-```Tex
-\documentclass[10pt,twocolumn,letterpaper]{article}
-
-\usepackage[review]{cvpr}      % To produce the REVIEW version
-%\usepackage[rebuttal]{cvpr}    % To produce a REBUTTAL
-%\usepackage{cvpr}              % To produce the CAMERA-READY version
-
-\def\cvprPaperID{*****} % *** Enter the CVPR Paper ID here
-\def\confName{CVPR}
-\def\confYear{2022}
-
-```
-
-
-# Acknowledgements
-This template is modified from the template by Ming-Ming Cheng from Nankai University (cmm_spam@nankai.edu.cn, see also https://github.com/MCG-NKU/CVPR_Template). That version was again modified from the the old CVPR/ICCV template files contributed by Paolo.Ienne@di.epfl.ch and awf@acm.org.
+### Examples for the Figures
+<p align="center">
+    <img src='samples/figure.jpg' width="800">
+</p>
