@@ -1,0 +1,37 @@
+\begin{table}[h]
+    \centering
+    \caption{A table for illustrating the network architecture.}
+    \label{tab:refineNet}
+	\resizebox{0.4\textwidth}{!}{
+        \begin{tabular}[t]{|*{6}{l|}}
+        \hline
+        \multicolumn{6}{|c|}{\textbf{RefineNet}} \\
+        \hline
+        \textbf{layer} & \textbf{k} & \textbf{s} & \textbf{chns} & \textbf{d-f} & \textbf{input} \\
+        \hline 
+        conv1   & 9     & 1    & 8/64   & 1    & Image+m\_1+a\_1+f\_1\\
+        conv2   & 4     & 2    & 64/64  & 2    & conv1 \\
+        conv3   & 4     & 2    & 64/64  & 4    & conv2 \\
+        conv4   & 4     & 2    & 64/64  & 8    & conv3 \\
+        \hline 
+        ResBlock1 & 3     & 1  & 64/64  & 8    & conv4 \\
+        ResBlock2 & 3     & 1  & 64/64  & 8    & ResBlock1 \\
+        ResBlock3 & 3     & 1  & 64/64  & 8    & ResBlock2 \\
+        ResBlock4 & 3     & 1  & 64/64  & 8    & ResBlock3 \\
+        ResBlock5 & 3     & 1  & 64/64  & 8    & ResBlock4 \\
+        \hline 
+        deconv1\_a  & 4   & 2    & 64/64 & 4   & ResBlock5 \\
+        deconv2\_a  & 4   & 2    & 64/64 & 2   & deconv1\_a \\
+        deconv3\_a  & 4   & 2    & 64/64 & 1   & deconv2\_a \\
+        \rowcolor{gray!25}
+        a\_refined  & 3   & 1    & 65/1 & 1   & deconv3\_a+a\_1\\
+        \hline
+        deconv1\_f  & 4   & 2    & 64/64 & 4   & ResBlock5 \\
+        deconv2\_f  & 4   & 2    & 64/64 & 2   & deconv1\_f \\
+        deconv3\_f  & 4   & 2    & 64/64 & 1   & deconv2\_f \\
+        \rowcolor{gray!25}
+        f\_refined        & 3   & 1    & 66/2 & 1   & deconv3\_f+f\_1\\
+        \hline
+        \end{tabular}
+    }
+\end{table}

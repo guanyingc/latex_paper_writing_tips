@@ -1,0 +1,157 @@
+% CVPR 2022 Paper Template
+% based on the CVPR template provided by Ming-Ming Cheng (https://github.com/MCG-NKU/CVPR_Template)
+% modified and extended by Stefan Roth (stefan.roth@NOSPAMtu-darmstadt.de)
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+%\usepackage[review]{cvpr}      % To produce the REVIEW version
+\usepackage{cvpr}              % To produce the CAMERA-READY version
+%\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
+% Include other packages here, before hyperref.
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+
+% included packages
+\usepackage{makecell}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+% It is strongly recommended to use hyperref, especially for the review version.
+% hyperref with option pagebackref eases the reviewers' job.
+% Please disable hyperref *only* if you encounter grave issues, e.g. with the
+% file validation for the camera-ready version.
+%
+% If you comment hyperref and then uncomment it, you should delete
+% ReviewTempalte.aux before re-running LaTeX.
+% (Or just hit 'q' on the first LaTeX run, let it finish, and you
+%  should be clear).
+\usepackage[pagebackref,breaklinks,colorlinks]{hyperref}
+
+
+% Support for easy cross-referencing
+\usepackage[capitalize]{cleveref}
+\crefname{section}{Sec.}{Secs.}
+\Crefname{section}{Section}{Sections}
+\Crefname{table}{Table}{Tables}
+\crefname{table}{Tab.}{Tabs.}
+
+% For caption setup
+\captionsetup[table]{aboveskip=3pt}
+\captionsetup[table]{belowskip=2pt}
+\captionsetup[figure]{aboveskip=5pt}
+\captionsetup[figure]{belowskip=0pt}
+\captionsetup{font=small}
+
+%%%%%%%%% PAPER ID  - PLEASE UPDATE
+\def\cvprPaperID{*****} % *** Enter the CVPR Paper ID here
+\def\confName{CVPR}
+\def\confYear{2022}
+
+
+% utils
+\newcommand{\correct}[1]{\textcolor{blue}{#1 \checkmark}}
+\newcommand{\wrong}[1]{\textcolor{red}{#1 $\times$}}
+
+\begin{document}
+
+%%%%%%%%% TITLE - PLEASE UPDATE
+\title{LaTex Paper Writing Tips for Beginners}
+
+\author{Guanying Chen \\
+{\tt\small guanying2018@gmail.com}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+}
+\maketitle
+{
+    \hypersetup{linkcolor=black}
+    \tableofcontents
+}
+
+
+%%%%%%%%% ABSTRACT
+
+%%%%%%%%% BODY TEXT
+\vspace{6em}
+\section{Introduction}
+\label{sec:intro}
+
+\section{Common Mistakes}
+\begin{itemize}
+    \item There should be a space before the open parentheses: [\wrong{hello(word)}, \correct{hello (word)}].
+    \item citation
+    \item There should be no space before the punctuation (\eg, ,. ').
+    \item \ie, \eg
+    \item Do not add citations in the abstract
+    \item Every equation should end with a punctuation.
+    \item The first character should be capitalized
+    \item keep the same tense
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
+\end{itemize}
+
+\section{Suggestions}
+\begin{itemize}
+    \item use newcommand for abbr
+    \item Fig/Tab.
+    \item use newcommand in equation
+    \item Principal: be compact and clear.
+    \item Contributions
+\end{itemize}
+
+\clearpage
+\section{Sample layout for figures}
+\begin{itemize}
+    \item The caption should be at the bottom of the figure. 
+\end{itemize}
+
+
+\clearpage
+\section{Sample layout for tables}
+Suggestions.
+\begin{itemize}
+    \item The caption should be at the top of the table.
+    \item The text should not be too small.
+    \item 
+\end{itemize}
+
+% single column
+\input{tables/table1}
+\input{tables/table2}
+\input{tables/table3}
+\input{tables/table4}
+\input{tables/table5}
+\input{tables/table6}
+\input{tables/table_network2}
+
+\input{tables/table_figure1}
+
+% two column
+\input{tables/table8}
+\input{tables/table9}
+\input{tables/table7}
+\input{tables/table_figure2}
+
+\input{tables/table_network1}
+
+ 
+\clearpage
+%%%%%%%%% REFERENCES
+{\small
+\bibliographystyle{ieee_fullname}
+\bibliography{egbib}
+}
+
+\end{document}

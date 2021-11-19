@@ -1,0 +1,57 @@
+\newcommand{\PSNRT}{PSNR\xspace}
+\newcommand{\VQM}{HDR-VQM\xspace}
+\newcommand{\VDP}{HDR-VDP2\xspace}
+\newcommand{\LowExposure}{Low-Exposure\xspace}
+\newcommand{\MiddleExposure}{Middle-Exposure\xspace}
+\newcommand{\HighExposure}{High-Exposure\xspace}
+\newcommand{\AllExposure}{All-Exposure\xspace}
+
+\newcommand{\Frst}[1]{\textcolor{red}{\textbf{#1}}}
+\newcommand{\Scnd}[1]{\textcolor{blue}{\textbf{#1}}}
+
+\begin{table*}[t] \centering
+    \caption{A two-column table with two sub-tables. \Frst{Red} text indicates the best and \Scnd{blue} text indicates the second best result, respectively.}
+    \label{tab:res_real_data_wide}
+    \makebox[\textwidth]{\small (a) Results on dataset A.} 
+    \resizebox{\textwidth}{!}{
+        \Large
+    \begin{tabular}{l||*{2}{c}|*{2}{c}|*{3}{c}||*{2}{c}|*{2}{c}|*{2}{c}|*{3}{c}}
+        \toprule
+        & \multicolumn{7}{c||}{2-Exposure} & \multicolumn{9}{c}{3-Exposure} \\
+        & \multicolumn{2}{c}{\LowExposure} & \multicolumn{2}{c}{\HighExposure} & \multicolumn{3}{c||}{\AllExposure} & \multicolumn{2}{c}{\LowExposure} & \multicolumn{2}{c}{\MiddleExposure} & \multicolumn{2}{c}{\HighExposure} & \multicolumn{3}{c}{\AllExposure} \\
+        Method & \PSNRT & \VDP & \PSNRT & \VDP  & \PSNRT & \VDP & \VQM & \PSNRT & \VDP & \PSNRT & \VDP  & \PSNRT & \VDP & \PSNRT & \VDP & \VQM \\
+        \midrule
+        Method A & \Scnd{40.00} & 73.70 & \Scnd{40.04} & \Scnd{70.08} & \Scnd{40.02} & 71.89 & \Scnd{76.22} 
+                      & \Scnd{39.61} & 73.24 & \Frst{39.67} & \Frst{73.24} & \Frst{40.01} & 67.90 & \Frst{39.77} & 70.37 & 79.55 \\
+        Method B      & 34.54 & 80.22 & 39.25 & 65.96 & 36.90 & 73.09 & 65.33 
+                      & 36.51 & 77.78 & 37.45 & 69.79 & 39.02 & 64.57 & 37.66 & 70.71 & 70.13 \\
+        Method C  & 39.79 & \Scnd{81.02} & 39.96 & 67.25 & 39.88 & \Scnd{74.13} & 73.84 
+                      & 39.48 & \Scnd{78.13} & 38.43 & 70.08 & 39.60 & \Scnd{67.94} & 39.17 & \Scnd{72.05} & \Scnd{80.70} \\
+        Ours          & \Frst{41.95} & \Frst{81.03} & \Frst{40.41} & \Frst{71.27} & \Frst{41.18} & \Frst{76.15} & \Frst{78.84}
+                      & \Frst{40.00} & \Frst{78.66} & \Scnd{39.27} & \Scnd{73.10} & \Scnd{39.99} & \Frst{69.99} & \Scnd{39.75} & \Frst{73.92} & \Frst{82.87} \\
+        \bottomrule
+    \end{tabular}
+    }
+
+    \vspace{0.5em}
+    \makebox[\textwidth]{\small (b) Results on dataset B.} 
+    \resizebox{\textwidth}{!}{
+        \Large
+    \begin{tabular}{l||*{2}{c}|*{2}{c}|*{3}{c}||*{2}{c}|*{2}{c}|*{2}{c}|*{3}{c}}
+        \toprule
+        & \multicolumn{7}{c||}{2-Exposure} & \multicolumn{9}{c}{3-Exposure} \\
+        & \multicolumn{2}{c}{\LowExposure} & \multicolumn{2}{c}{\HighExposure} & \multicolumn{3}{c||}{\AllExposure} & \multicolumn{2}{c}{\LowExposure} & \multicolumn{2}{c}{\MiddleExposure} & \multicolumn{2}{c}{\HighExposure} & \multicolumn{3}{c}{\AllExposure} \\
+        Method & \PSNRT & \VDP & \PSNRT & \VDP  & \PSNRT & \VDP & \VQM & \PSNRT & \VDP & \PSNRT & \VDP  & \PSNRT & \VDP & \PSNRT & \VDP & \VQM \\
+        \midrule
+        Method A & 37.73 & 74.05 & 45.71 & 66.67 & 41.72 & 70.36 & 85.33 
+                      & 37.53 & 72.03 & 36.38 & 65.37 & 34.73 & 62.24 & 36.21 & 66.55 & 84.43 \\
+        Method B      & 36.41 & 85.68 & \Scnd{49.89} & \Scnd{69.90} & 43.15 & 77.79 & 78.92 
+                      & 36.43 & 77.74 & 39.80 & \Scnd{67.88} & \Scnd{43.03} & \Scnd{64.74} & 39.75 & \Scnd{70.12} & 87.93 \\
+        Method C  & \Scnd{39.94} & \Scnd{86.77} & 49.49 & 69.04 & \Scnd{44.72} & \Scnd{77.91} & \Scnd{87.16} 
+                      & \Scnd{38.34} & \Scnd{78.04} & \Scnd{41.21} & 66.07 & 42.66 & 64.01 & \Scnd{40.74} & 69.37 & \Scnd{89.36}\\
+        Ours          & \Frst{40.83} & \Frst{86.84} & \Frst{50.10} & \Frst{71.33} & \Frst{45.46} & \Frst{79.09} & \Frst{87.40} 
+                      & \Frst{38.77} & \Frst{78.11} & \Frst{41.47} & \Frst{68.49} & \Frst{43.24} & \Frst{65.08} & \Frst{41.16} & \Frst{70.56} & \Frst{89.56}\\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table*}

@@ -1,0 +1,24 @@
+% \usepackage{colortbl}  
+% \usepackage{xcolor}
+
+\begin{table}[thb]\centering
+    \caption{a table with parallel lines for grouping and color highlight.} %
+    \label{tab:ablation_study}
+    \resizebox{0.48\textwidth}{!}{
+    \Large
+    \begin{tabular}{*{2}{l}||*{2}{c}||*{2}{c}||*{2}{c}}
+        \toprule
+        \multicolumn{1}{c}{} & \multicolumn{1}{c||}{} & \multicolumn{2}{c||}{Synthetic Dataset} & \multicolumn{2}{c||}{Static Data} & \multicolumn{2}{c}{Dynamicgt Data} \\
+        ID & Method  & PSNRT & VDP & PSNRT & VDP & PSNRT & VDP \\
+        \midrule
+        0 & ANet  & 39.25 & 70.81 & 40.62 & 74.51 & 44.43 & 77.74 \\ %
+        1 & BNet  & 39.69 & 70.95 & 37.61 & 75.30 & 43.70 & 78.97 \\
+        \rowcolor{gray!20}
+        2 & ANet + BNet  & \textbf{40.34} & \textbf{71.79} & \textbf{41.18} & \textbf{76.15} & \textbf{45.46} & \textbf{79.09} \\
+        \midrule
+        3 & ANet + BNet w/o C & 39.72 & 71.38 & 40.52 & 74.79 & 45.09 & 78.24 \\ %
+        4 & ANet + BNet w/o D & 40.03 & 71.66 & 40.80 & 76.12 & 45.17 & 78.99 \\ %
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}

@@ -1,0 +1,20 @@
+% require package makecell 
+\begin{table}[thb]\centering
+    \caption{A table with line break in the header. Line break is useful if the item name is too long.}
+    \label{tab:table3}
+    \resizebox{0.48\textwidth}{!}{
+    \large
+    \begin{tabular}{*{10}{c}}
+        \toprule
+         %&  &  \multicolumn{3}{c}{\makecell{Static Scenes \\ w/ Ground Truth}} & \multicolumn{3}{c}{\makecell{Dynamic Scenes \\ w/o Ground Truth}} \\
+        &  &  \multicolumn{3}{c}{$6-9$ frames} & \multicolumn{3}{c}{$5-7$ frames} \\
+        Data & Size &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} &  \makecell{2-Exp \\ Scenes} \\
+        \midrule
+        A & $1280\times 720$ & 1 & 2 & 3 & 4 & 5 & 4 \\
+        Ours & $4096\times 2168$ & 2 & 3 & 4 & 6 & 5 & 4 \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+

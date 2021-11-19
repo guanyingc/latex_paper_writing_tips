@@ -1,0 +1,32 @@
+\begin{table*}[t] \centering
+    \caption{A two-column table with images in the header. Images are useful to visualize each item in the header.} 
+    \label{tab:table10}
+    \resizebox{\textwidth}{!}{%
+        %\large
+        \begin{tabular}{l|*{6}{cc}cc}
+            \toprule
+            & \multicolumn{2}{c}{\includegraphics[height=0.09\textwidth]{example-image}}
+            & \multicolumn{2}{c}{\includegraphics[height=0.09\textwidth]{example-image}}
+            & \multicolumn{2}{c}{\includegraphics[height=0.09\textwidth]{example-image}}
+            & \multicolumn{2}{c}{\includegraphics[height=0.09\textwidth]{example-image}}
+            & \multicolumn{2}{c}{\includegraphics[height=0.09\textwidth]{example-image}}
+            & \multicolumn{2}{c}{\includegraphics[height=0.09\textwidth]{example-image}}
+            %\vspace{-0.5em}
+            \\
+            & \multicolumn{2}{c}{\makebox[0.18\textwidth]{\emph{Helmet Side}}}
+            & \multicolumn{2}{c}{\makebox[0.18\textwidth]{\emph{Plant}}}
+            & \multicolumn{2}{c}{\makebox[0.18\textwidth]{\emph{Fighting Knight}}}
+            & \multicolumn{2}{c}{\makebox[0.18\textwidth]{\emph{Kneeling Knight}}}
+            & \multicolumn{2}{c}{\makebox[0.18\textwidth]{\emph{Standing Knight}}}
+            & \multicolumn{2}{c}{\makebox[0.18\textwidth]{\emph{Helmet Front}}}
+            & \multicolumn{2}{c}{\makebox[0.18\textwidth]{average}} 
+            \\
+            \makebox[0.12\textwidth]{model\hfill}  & dir.    & int.  &  dir.    & int.  &  dir.     & int. &  dir.    & int. & dir.    & int.  &  dir.  & int.  &  dir.  & int. \\
+            \midrule
+            Method A & 25.40   & 0.576     & 20.56     & 0.227    & 69.50    & 1.137     & 46.69    & 9.805     & 33.81    & 1.311     & 81.60    & \textbf{0.133} & 46.26   & 2.198    \\
+            Method B & 6.57	& 0.212	    & 16.06	    & 0.170	   & 15.95 	  & 0.214	  & 19.84	 & 0.199	 & 11.60    & 0.286	    & 11.62	   & 0.248	  & 13.61    & 0.221      \\
+            Method C & \textbf{5.33}& \textbf{0.096} & \textbf{10.49} & \textbf{0.154}& \textbf{13.42}& \textbf{0.168} & \textbf{14.41}& \textbf{0.181} & \textbf{5.31} & \textbf{0.198} & \textbf{6.22} & 0.183     & \textbf{9.20} & \textbf{0.163} \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table*}

@@ -1,0 +1,87 @@
+\begin{table*}[thb]
+    \centering
+    \caption{A two-column table for illustrating the network architecture.}
+    \label{tab:table_network1}
+	\resizebox{0.90\textwidth}{!}{
+    \begin{tabular}{cc}
+        \begin{tabular}[t]{|*{6}{l|}}
+        \hline
+        \multicolumn{6}{|c|}{\textbf{Encoder}} \\
+        \hline
+        \textbf{layer} & \textbf{k} & \textbf{s} & \textbf{chns} & \textbf{d-f} & \textbf{input} \\
+        \hline 
+        conv1   & 3     & 1     & 3/16    & 1    & Image \\
+        conv1b  & 3     & 1     & 16/16   & 1    & conv1 \\ 
+        conv2   & 3     & 2     & 16/16   & 2    & conv1b \\
+        conv2b  & 3     & 1     & 16/16   & 2    & conv2 \\ 
+        conv3   & 3     & 2     & 16/32   & 4    & conv2b \\
+        conv3b  & 3     & 1     & 32/32   & 4    & conv3 \\ 
+        conv4   & 3     & 2     & 32/64   & 8    & conv3b \\
+        conv4b  & 3     & 1     & 64/64   & 8    & conv4 \\ 
+        conv5   & 3     & 2     & 64/128  & 16   & conv4b \\
+        conv5b  & 3     & 1     & 128/128 & 16   & conv5 \\ 
+        conv6   & 3     & 2     & 128/256 & 32   & conv5b \\
+        conv6b  & 3     & 1     & 256/256 & 32   & conv6 \\ 
+        conv7   & 3     & 2     & 256/256 & 64   & conv6b \\
+        conv7b  & 3     & 1     & 256/256 & 64   & conv7 \\
+        \hline
+        \end{tabular}
+        \begin{tabular}[t]{|*{6}{l|}}
+            \hline
+            \multicolumn{6}{|c|}{\textbf{Decoder}} \\
+            \hline
+            \textbf{layer} & \textbf{k} & \textbf{s} & \textbf{chns} & \textbf{d-f} & \textbf{input} \\
+            \hline 
+            conv\_up7\_m & 3     & 1     & 256/256   & 32  & conv7b \\
+            conv\_up7\_a & 3     & 1     & 256/256   & 32  & conv7b \\
+            conv\_up7\_f & 3     & 1     & 256/256   & 32  & conv7b \\
+            \hline 
+            \multicolumn{6}{|c|}{conv\_up7=conv\_up7\_m+conv\_up7\_a+conv\_up7\_f} \\
+            \hline
+            conv\_up6\_m & 3     & 1     & 256/128   & 16  & conv\_up7+conv6b\\
+            conv\_up6\_a & 3     & 1     & 256/128   & 16  & conv\_up7+conv6b\\
+            conv\_up6\_f & 3     & 1     & 256/128   & 16  & conv\_up7+conv6b\\
+            \hline 
+            \multicolumn{6}{|c|}{conv\_up6=conv\_up6\_m+conv\_up6\_a+conv\_up6\_f} \\
+            \hline
+            conv\_up5\_m & 3     & 1     & 128/64    & 8   & conv\_up6+conv5b \\
+            conv\_up5\_a & 3     & 1     & 128/64    & 8   & conv\_up6+conv5b \\
+            conv\_up5\_f & 3     & 1     & 128/64    & 8   & conv\_up6+conv5b \\
+            \hline
+            \multicolumn{6}{|c|}{conv\_up5=conv\_up5\_m+conv\_up5\_a+conv\_up5\_f} \\
+            \hline
+            m\_4         & 3     & 1     & 128/2     & 8   & conv\_up5+conv4b \\
+            a\_4         & 3     & 1     & 128/1     & 8   & conv\_up5+conv4b \\
+            f\_4         & 3     & 1     & 128/2     & 8   & conv\_up5+conv4b \\
+            conv\_up4\_m & 3     & 1     & 128/32    & 4   & conv\_up5+conv4b \\
+            conv\_up4\_a & 3     & 1     & 128/32    & 4   & conv\_up5+conv4b \\
+            conv\_up4\_f & 3     & 1     & 128/32    & 4   & conv\_up5+conv4b \\
+            \hline
+            \multicolumn{6}{|c|}{conv\_up4=conv\_up4\_m+conv\_up4\_a+conv\_up4\_f} \\
+            \hline
+            m\_3         & 3     & 1     & 69/2      & 4   & conv\_up4+conv3b+(m\_4$^{\times 2}$+a\_4$^{\times 2}$+a\_4$^{\times 2}$) \\
+            a\_3         & 3     & 1     & 69/1      & 4   & conv\_up4+conv3b+(m\_4$^{\times 2}$+a\_4$^{\times 2}$+a\_4$^{\times 2}$) \\
+            f\_3         & 3     & 1     & 69/2      & 4   & conv\_up4+conv3b+(m\_4$^{\times 2}$+a\_4$^{\times 2}$+a\_4$^{\times 2}$) \\
+            conv\_up3\_m & 3     & 1     & 69/16     & 2   & conv\_up4+conv3b+(m\_4$^{\times 2}$+a\_4$^{\times 2}$+a\_4$^{\times 2}$) \\
+            conv\_up3\_a & 3     & 1     & 69/16     & 2   & conv\_up4+conv3b+(m\_4$^{\times 2}$+a\_4$^{\times 2}$+a\_4$^{\times 2}$) \\
+            conv\_up3\_f & 3     & 1     & 69/16     & 2   & conv\_up4+conv3b+(m\_4$^{\times 2}$+a\_4$^{\times 2}$+a\_4$^{\times 2}$) \\
+            \hline
+            \multicolumn{6}{|c|}{conv\_up3=conv\_up3\_m+conv\_up3\_a+conv\_up3\_f} \\
+            \hline
+            m\_2         & 3     & 1     & 37/2      & 2   & conv\_up3+conv2b+(m\_3$^{\times 2}$+a\_3$^{\times 2}$+a\_3$^{\times 2}$) \\
+            a\_2         & 3     & 1     & 37/1      & 2   & conv\_up3+conv2b+(m\_3$^{\times 2}$+a\_3$^{\times 2}$+a\_3$^{\times 2}$) \\
+            f\_2         & 3     & 1     & 37/2      & 2   & conv\_up3+conv2b+(m\_3$^{\times 2}$+a\_3$^{\times 2}$+a\_3$^{\times 2}$) \\
+            conv\_up2\_m & 3     & 1     & 37/16     & 1   & conv\_up3+conv2b+(m\_3$^{\times 2}$+a\_3$^{\times 2}$+a\_3$^{\times 2}$) \\
+            conv\_up2\_a & 3     & 1     & 37/16     & 1   & conv\_up3+conv2b+(m\_3$^{\times 2}$+a\_3$^{\times 2}$+a\_3$^{\times 2}$) \\
+            conv\_up2\_f & 3     & 1     & 37/16     & 1   & conv\_up3+conv2b+(m\_3$^{\times 2}$+a\_3$^{\times 2}$+a\_3$^{\times 2}$) \\
+            \hline
+            \multicolumn{6}{|c|}{conv\_up2=conv\_up2\_m+conv\_up2\_a+conv\_up2\_f} \\
+            \hline
+            m\_1         & 3     & 1     & 37/2      & 1   & conv\_up2+conv1b+(m\_2$^{\times 2}$+a\_2$^{\times 2}$+a\_2$^{\times 2}$) \\
+            a\_1         & 3     & 1     & 37/1      & 1   & conv\_up2+conv1b+(m\_2$^{\times 2}$+a\_2$^{\times 2}$+a\_2$^{\times 2}$) \\
+            f\_1         & 3     & 1     & 37/2      & 1   & conv\_up2+conv1b+(m\_2$^{\times 2}$+a\_2$^{\times 2}$+a\_2$^{\times 2}$) \\
+            \hline                                                                         
+        \end{tabular}
+    \end{tabular}
+    }
+\end{table*}

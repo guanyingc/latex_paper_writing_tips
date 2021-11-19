@@ -1,0 +1,20 @@
+% require package makecell 
+\begin{table}[thb]\centering
+    \caption{A table with multi-column headers and bold font highlights.}
+    \label{tab:table5}
+    \resizebox{0.48\textwidth}{!}{
+    \large
+    \begin{tabular}{c|c|ccc|ccc}
+        \toprule
+         %&  &  \multicolumn{3}{c}{\makecell{Static Scenes \\ w/ Ground Truth}} & \multicolumn{3}{c}{\makecell{Dynamic Scenes \\ w/o Ground Truth}} \\
+        &  &  \multicolumn{3}{c|}{$6-9$ frames} & \multicolumn{3}{c}{$5-7$ frames} \\
+        Data & Size &  \makecell{2-Exp \\ Break} &  \makecell{2-Exp \\ Break} &  \makecell{2-Exp \\ Break} &  \makecell{2-Exp \\ Break} &  \makecell{2-Exp \\ Break} &  \makecell{2-Exp \\ Break} \\
+        \midrule
+        A & $1280\times 720$ & 1 & 2 & 3 & 4 & \textbf{5} & \textbf{7} \\
+        Ours & $4096\times 2168$ & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{6} & \textbf{5} & 4 \\
+        \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+
