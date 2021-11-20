@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+    \caption{A two-column table with \textbackslash cmidrule for grouping without using vertical lines.}
+\label{tab:quantitative}
+
+\resizebox{1.\textwidth}{!}{
+    \begin{tabular}{lcccccccccc}
+
+    \toprule
+    {} & \multicolumn{6}{c}{Dataset A} & \multicolumn{4}{c}{Dataset B} \\
+    \cmidrule[0.5pt](rl){2-7}
+    \cmidrule[0.5pt](rl){8-11}
+    {} & \multicolumn{3}{c}{Setup A}  & \multicolumn{3}{c}{Setup B} & \multicolumn{2}{c}{Setup C}  & \multicolumn{2}{c}{Setup D} \\
+    \cmidrule[0.5pt](rl){2-4}
+    \cmidrule[0.5pt](rl){5-7}
+    \cmidrule[0.5pt](rl){8-9}
+    \cmidrule[0.5pt](rl){10-11}
+        {Method} & {Some Metric A} & {Some Metric B} & {Some Metric C} & {Some Metric A} & {Some Metric B} & {Some Metric C} & {Metric D} & {Metric E} & {Metric D} & {Metric E} \\
+    \midrule
+    Method A &  34.54 & 80.22 & 39.25 & 65.96 & 36.90 & 73.09 & 65.33 & 36.51 & 77.78 & 37.45 \\
+    Method B  &  34.54 & 80.22 & 39.25 & 65.96 & 36.90 & 73.09 & 65.33 & 36.51 & 77.78 & 37.45 \\
+    Method C   &  34.54 & 80.22 & 39.25 & 65.96 & 36.90 & 73.09 & 65.33 & 36.51 & 77.78 & 37.45 \\
+    Method D   &  34.54 & 80.22 & 39.25 & 65.96 & 36.90 & 73.09 & 65.33 & 36.51 & 77.78 & 37.45 \\
+    \bottomrule
+    \end{tabular}
+}
+\end{table*}

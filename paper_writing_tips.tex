@@ -44,7 +44,7 @@
 \captionsetup[table]{belowskip=2pt}
 \captionsetup[figure]{aboveskip=5pt}
 \captionsetup[figure]{belowskip=0pt}
-\captionsetup{font=small}
+\captionsetup{font=normal}
 
 %%%%%%%%% PAPER ID  - PLEASE UPDATE
 \def\cvprPaperID{*****} % *** Enter the CVPR Paper ID here
@@ -69,6 +69,7 @@
 % just like the second author.
 % To save space, use either the email address or home page, not both
 }
+\onecolumn
 \maketitle
 {
     \hypersetup{linkcolor=black}
@@ -79,7 +80,9 @@
 %%%%%%%%% ABSTRACT
 
 %%%%%%%%% BODY TEXT
-\vspace{5em}
+%\newpage
+\vspace{7em}
+
 \section{Introduction}
 \label{sec:intro}
 \LaTeX\ is a very powerful tool for documentation preparation, and is often used by researchers to prepare a manuscript for reviewing and publication. 
@@ -88,8 +91,12 @@ However, some new graduate students might not have experience in using \LaTeX an
 In this article, we will first provide some tips for paper writing.  
 Then, we will showcase several working examples for the tables and figures, which have been used in our previous publications. The readers are encouraged to adapt those tables and figures to their purposes to save time when preparing their first papers.
 
+\twocolumn
+
 \section{Tips for the Writing}
-In this section, we provide some tips for paper writing. 
+In this section, we point out some common mistakes in paper writing and give some suggestions for editing \LaTeX\ files.
+
+\subsection{Some Common Mistakes}
 \begin{itemize}
     \item There should be a space before the open parentheses:\\
         \wrong{Convolutional neural network(CNN) has been successfully applied on various vision problems.}\\
@@ -118,52 +125,57 @@ In this section, we provide some tips for paper writing.
     \item There should be a space before the citation:\\
         \wrong{A proposes a method B for this problem[1].}\\
         \correct{A proposes a method B for this problem~[1].}
+\end{itemize}
+
+\subsection{Some Suggestions}
+\begin{itemize}
     \item Do not include citations in the abstract.
-    \item Use \textbackslash ie command for \ie and use \textbackslash eg for \eg.
     \item Define a macro for a word or phrase if it appears frequently (\eg, the method name and the dataset name). The command can be\\``\textbackslash newcommand\{\textbackslash NetName\}\{A Great Deep Net\}''.
-    \item When referring to a table, always use ``Table~\ref{tab:table1}'' in a sentence.
+    \item Use ``\textbackslash ie'' command for ``\ie'' and use ``\textbackslash eg'' for ``\eg.''.
+    \item When referring to a table, always use ``Table~\ref{tab:table1}'' in the sentence:\\
+        \wrong{Our results are shown in Tab.~1.}\\
+        \correct{Our results are shown in Table~1.}
+
     \item The table caption should be at the top of the table.
-    \item When referring to a figure, use ``Figure~\ref{fig:figure1}'' at the beginning, and ``Fig.~\ref{fig:figure1}'' at the middle or the end of a sentence.
+    \item When referring to a figure, use ``Figure~\ref{fig:figure1}'' at the beginning of a sentence and ``Fig.~\ref{fig:figure1}'' elsewhere.\\
+        \wrong{Fig.1 shows our results.}\\
+        \correct{Our results are shown in Fig.~1.}\\
+        \correct{Figure~1 shows our results.}
     \item The figure caption should be at the bottom of the table.
     \item It is better to put the tables and figures at the top of a page.
 \end{itemize}
 
-
 \clearpage
+
 \section{Examples for the Tables}
 
-% single column
+%\subsection{Examples for the Single-column Tables}
 \input{tables/table1} % simple table
 \input{tables/table2} % multi-column table
 \input{tables/table3} % multi-column with makecell
 \input{tables/table4} % multi-column with vertical lines
 \input{tables/table5} % multi-column with bold font
-\newpage
 \input{tables/table6} % multi-column with parallel lines
 \input{tables/table_network2} % single-column network arch
 
 \input{tables/table_figure1} % table with images
 
-% two column
+%\subsection{Examples for the Two-column Tables}
 \input{tables/table8} % two-column table
 \input{tables/table12} % two-column table with remarks
 \input{tables/table9} % two-column table with color header
 \input{tables/table7} % two-column table with two sub-tables
+\input{tables/table13} % two-column table with cmidrule
 \input{tables/table_figure2} % two-column tables with images in the header
 \input{tables/table10} % two tables side-by-side
-
-\clearpage
 \input{tables/table11} % table with caption at the left
-
 \input{tables/table_network1} % two column network arch table
 
- 
 \clearpage
 \clearpage
 
-\section{Examples for Figures}
-
-% Single-column
+\section{Examples for the Figures}
+%\subsection{Examples for the Single-column Figures}
 \input{figures/figure1} % single image
 \input{figures/figure2} % two images
 \input{figures/figure3} % four images
@@ -172,8 +184,7 @@ In this section, we provide some tips for paper writing.
 \input{figures/figure6} % two sub figures
 \input{figures/figure15} % figure numeric results and color bar
 
-
-% Two column
+%\subsection{Examples for the Two-column Figures}
 \input{figures/figure7} % single image
 \input{figures/figure8} % multiple images
 \input{figures/figure9} % multiple images with two zoom in patches (horizontal)
