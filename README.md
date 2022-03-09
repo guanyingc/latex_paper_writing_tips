@@ -1,9 +1,9 @@
 # Tips for Writing a Research Paper using LaTeX
 
 LaTeX is a very powerful tool for documentation preparation, and is often used by researchers to prepare a manuscript for reviewing and publication. 
-However, some new graduate students might not have experience in using LaTeX and thus have a difficult time in prepare their first paper. 
+However, some new graduate students might not have experience in using LaTeX and thus have a difficult time in prepare their first papers.
 
-In this [article](./paper_writing_tips.pdf), we will first provide some tips for paper writing.
+In this [article](https://www.overleaf.com/read/hypvpvnzjjwx), we will first provide some tips for paper writing.
 Then, we will showcase several working examples for the tables and figures, which have been used in our previous publications. The readers are encouraged to adapt those tables and figures to their purposes to save time when preparing their first papers.
 
 ## Examples for the Tables
@@ -24,4 +24,4 @@ Then, we will showcase several working examples for the tables and figures, whic
 - [HDR Video Reconstruction: A Coarse-to-fine Network and A Real-world Benchmark Dataset (ICCV 2021)](https://github.com/guanyingc/DeepHDRVideo_Poster_LaTex)
 
 ### LaTex Files for My PhD Thesis
-- [Single View Analysis of Non-Lambertian Objects Based on Deep Learning](https://github.com/guanyingc/HKU-PhD-Thesis-LaTex)
+- [Single View Analysis of Non-Lambertian Objects Based on Deep Learning (Computer Science, HKU)](https://github.com/guanyingc/HKU-PhD-Thesis-LaTex)
