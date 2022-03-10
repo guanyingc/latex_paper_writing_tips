@@ -30,4 +30,5 @@ Overleaf Link: https://www.overleaf.com/read/hypvpvnzjjwx
 - [Single View Analysis of Non-Lambertian Objects Based on Deep Learning (Computer Science, HKU)](https://github.com/guanyingc/HKU-PhD-Thesis-LaTex)
 
 ### Useful Template for Paper Submission
-- [Supplementary Material for Conference Submission](https://www.overleaf.com/read/drpfhrnwyvfz)
+- [Supplementary Material for Conference Submission (CVPR/ICCV/ECCV)](https://www.overleaf.com/read/drpfhrnwyvfz)
+- [Rebuttal for Conference Submission (CVPR/ICCV)](https://github.com/guanyingc/cv_rebuttal_template)
