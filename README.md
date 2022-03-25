@@ -18,17 +18,21 @@ Overleaf Link: https://www.overleaf.com/read/hypvpvnzjjwx
     <img src='samples/figure.jpg' width="800">
 </p>
 
-## More LaTeX Resources
+## More Resources
 
-### LaTex Posters for My Conference Papers
+### LaTeX Posters for My Conference Papers
 - [TOM-Net: Learning Transparent Object Matting from a Single Image (CVPR 2018)](https://github.com/guanyingc/TOM-Net_Poster_LaTex)
 - [PS-FCN: A Flexible Learning Framework for Photometric Stereo (ECCV 2018)](https://github.com/guanyingc/PS-FCN_Poster_LaTex)
 - [Self-calibrating Deep Photometric Stereo Networks (CVPR 2019)](https://github.com/guanyingc/SDPS-Net_Poster_LaTex)
 - [HDR Video Reconstruction: A Coarse-to-fine Network and A Real-world Benchmark Dataset (ICCV 2021)](https://github.com/guanyingc/DeepHDRVideo_Poster_LaTex)
 
-### LaTex Files for My PhD Thesis
-- [Single View Analysis of Non-Lambertian Objects Based on Deep Learning (Computer Science, HKU)](https://github.com/guanyingc/HKU-PhD-Thesis-LaTex)
-
-### Useful Template for Paper Submission
+### Useful LaTeX Template for Paper Submission
 - [Supplementary Material for Conference Submission (CVPR/ICCV/ECCV)](https://www.overleaf.com/read/drpfhrnwyvfz)
 - [Rebuttal for Conference Submission (CVPR/ICCV)](https://github.com/guanyingc/cv_rebuttal_template)
+
+### LaTeX Files for My Thesis
+- [Single View Analysis of Non-Lambertian Objects Based on Deep Learning (Computer Science, HKU)](https://github.com/guanyingc/HKU-PhD-Thesis-LaTex)
+- [LaTex Template Files for Thesis (Sun Yat-sen University)](https://github.com/guanyingc/SYSU-LaTex-Thesis)
+
+### Tools for Figure Creation
+- [A simple code for plotting figure, colorbar, and cropping with python](https://github.com/guanyingc/python_plot_utils)
