@@ -20,15 +20,26 @@ Overleaf Link: https://www.overleaf.com/read/hypvpvnzjjwx
 
 ## More Resources
 
-### LaTeX Posters for My Conference Papers
+### Useful LaTeX Template for Paper Submission
+- [:boom: Main Paper + Rebuttal + Supplementary for Conference Submission (CVPR/ICCV) in Overleaf](https://www.overleaf.com/read/nzxkcksvjhkr)
+
+<p align="center">
+    <img src='samples/cvpr_latex_structure.jpg' width="800">
+    <img src='samples/cvpr_latex_supp.jpg' width="800">
+    <img src='samples/cvpr_latex_rebuttal.jpg' width="800">
+</p>
+
+- [Rebuttal for Conference Submission (CVPR/ICCV)](https://github.com/guanyingc/cv_rebuttal_template)
+- [Supplementary Material for Conference Submission (CVPR/ICCV/ECCV)](https://www.overleaf.com/read/drpfhrnwyvfz)
+
+### Sample LaTeX Posters for CV Conference Papers
 - [TOM-Net: Learning Transparent Object Matting from a Single Image (CVPR 2018)](https://github.com/guanyingc/TOM-Net_Poster_LaTex)
 - [PS-FCN: A Flexible Learning Framework for Photometric Stereo (ECCV 2018)](https://github.com/guanyingc/PS-FCN_Poster_LaTex)
 - [Self-calibrating Deep Photometric Stereo Networks (CVPR 2019)](https://github.com/guanyingc/SDPS-Net_Poster_LaTex)
 - [HDR Video Reconstruction: A Coarse-to-fine Network and A Real-world Benchmark Dataset (ICCV 2021)](https://github.com/guanyingc/DeepHDRVideo_Poster_LaTex)
-
-### Useful LaTeX Template for Paper Submission
-- [Supplementary Material for Conference Submission (CVPR/ICCV/ECCV)](https://www.overleaf.com/read/drpfhrnwyvfz)
-- [Rebuttal for Conference Submission (CVPR/ICCV)](https://github.com/guanyingc/cv_rebuttal_template)
+<p align="center">
+    <img src='samples/poster_example.jpg' width="800">
+</p>
 
 ### LaTeX Files for My Thesis
 - [Single View Analysis of Non-Lambertian Objects Based on Deep Learning (Computer Science, HKU)](https://github.com/guanyingc/HKU-PhD-Thesis-LaTex)
