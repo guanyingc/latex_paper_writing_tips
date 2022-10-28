@@ -29,6 +29,12 @@ Overleaf Link: https://www.overleaf.com/read/hypvpvnzjjwx
     <img src='samples/cvpr_latex_rebuttal.jpg' width="800">
 </p>
 
+**Download or fork the overleaf project: click the menu at the top left, and select `Source` or `Copy`**
+<p align="center">
+    <img src='samples/overleaf_menu.png' height="200">
+    <img src='samples/overleaf_download_copy.png' height="200">
+</p>
+
 - [Rebuttal for Conference Submission (CVPR/ICCV)](https://github.com/guanyingc/cv_rebuttal_template)
 - [Supplementary Material for Conference Submission (CVPR/ICCV/ECCV)](https://www.overleaf.com/read/drpfhrnwyvfz)
 
