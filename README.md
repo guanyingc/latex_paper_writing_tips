@@ -37,6 +37,7 @@ Overleaf Link: https://www.overleaf.com/read/hypvpvnzjjwx
 
 - [Rebuttal for Conference Submission (CVPR/ICCV)](https://github.com/guanyingc/cv_rebuttal_template)
 - [Supplementary Material for Conference Submission (CVPR/ICCV/ECCV)](https://www.overleaf.com/read/drpfhrnwyvfz)
+- [Paper Writing tips by MLNLP-World](https://github.com/MLNLP-World/Paper-Writing-Tips)
 
 ### Sample LaTeX Posters for CV Conference Papers
 - [TOM-Net: Learning Transparent Object Matting from a Single Image (CVPR 2018)](https://github.com/guanyingc/TOM-Net_Poster_LaTex)
@@ -53,3 +54,8 @@ Overleaf Link: https://www.overleaf.com/read/hypvpvnzjjwx
 
 ### Tools for Figure Creation
 - [A simple code for plotting figure, colorbar, and cropping with python](https://github.com/guanyingc/python_plot_utils)
+
+
+### Great Resources Shared by Others
+- Paper Writing Tips by MLNLP-World: https://github.com/MLNLP-World/Paper-Writing-Tips
+- Paper Picture Writing Code by MLNLP-World: https://github.com/MLNLP-World/Paper-Picture-Writing-Code
