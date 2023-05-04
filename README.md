@@ -5,7 +5,7 @@
   * [Examples for Table Organization](#examples-for-table-organization)
   * [Examples for Figure Organization](#examples-for-figure-organization)
 * [More Resources](#more-resources)
-  * [LaTeX Templates for CVPR/ICCV Paper Submission](#latex-templates-for-cvpriccv-paper-submission)
+  * [LaTeX Templates for CVPR/ICCV/NeurIPS Paper Submission](#latex-templates-for-cvpriccvneurips-paper-submission)
   * [Sample LaTeX Conference Posters (CVPR/ICCV/ECCV/NeurIPS)](#sample-latex-conference-posters-cvpriccveccvneurips)
   * [LaTeX Files for My Thesis (SYSU B.Eng. + HKU PhD.)](#latex-files-for-my-thesis-sysu-beng--hku-phd)
   * [Simple Python Programs for Figure Creation](#simple-python-programs-for-figure-creation)
@@ -33,7 +33,8 @@ Then, we will showcase several working examples for the tables and figures, whic
 
 ## More Resources
 
-### LaTeX Templates for CVPR/ICCV Paper Submission
+### LaTeX Templates for CVPR/ICCV/NeurIPS Paper Submission
+- [:boom: Main Paper + Supplementary for Conference Submission (NeurIPS) in Overleaf](https://www.overleaf.com/read/bwkhwwpjnnrs)
 - [:boom: Main Paper + Rebuttal + Supplementary for Conference Submission (CVPR/ICCV) in Overleaf](https://www.overleaf.com/read/nzxkcksvjhkr)
 
 <p align="center">
